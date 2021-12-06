@@ -1,4 +1,5 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat&display=swap');
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +36,408 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+/* Styles for App.js */
+.form-switch{
+  display: flex;
+  flex-direction: column;
+  height: 24px;
+  justify-content: safe;
+  font-family: 'Lato', sans-serif; 
+  float: right;
+  margin-right: 12px; 
+  position: static;
+ 
 }
+
+
+
+/* Styles for Login.js */
+
+.loginContainer{
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  width: 75%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.gradient{
+  /* background-image: linear-gradient(to right, #d16ba5, #dd649b, #e75c8e, #f05580, #f6506f, #f76356, #f1783f, #e38e2d, #c2b43c, #9cd270, #74e9b1, #5ffbf1); */
+  /* background-image: linear-gradient(to right, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F,#F9F871 ); */
+  /* background-image: linear-gradient(to right, #bbf41a, #54f378, #00e9b8, #00dae0, #12c6eb); */
+  /* background-image: linear-gradient(to right, #ff0060, #fe235d, #fd355a, #fc4258, #fa4d56); */
+  /* background-image: linear-gradient(to right, #ff7171, #ff79a1, #f28bcc, #d8a1ec, #b8b5ff); */
+  height: 100vh;
+  width: 50%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.gradientContent{
+  margin-top: -25px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: rgba(253, 244, 244, 0.4);
+}
+
+.gradientContent :hover{
+  color: rgba(248, 245, 245, 0.7)
+  
+}
+
+.gradientContent  h2{
+ 
+  font-size: 3vw;
+  font-weight:bolder;
+  font-family: 'Lato',sans-serif;
+}
+
+.gradientContent p{
+  font-weight: 600;
+}
+
+.form-header{
+  text-align: center;
+  margin: 8% auto;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  /* color: rgb(4, 0, 0, 0.6); */
+}
+
+.closeDiv{
+  float: right;
+}
+
+.closeBtn{
+  /* background-image: linear-gradient(to right, #ff0060, #fe235d, #fd355a, #fc4258, #fa4d56);; */
+  /* background-image: linear-gradient(to right, #8dda51, #00d78f, #00cdc5, #00bde7, #12a9eb); */
+  /* background-image: linear-gradient(to left, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F,#F9F871 ); */
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color:rgba(1, 0, 1, 0.3);
+  font-size: 20px;
+  border:rgb(3, 0, 0, 0.7);
+}
+
+.login-form{
+  width: 45%;
+  margin: auto;
+  align-items: center;
+  font-weight: 600;
+}
+
+.action-btn{
+  color: rgba(31, 5, 5, 0.6);
+  border-color: #424141;
+  display: flex;
+  /* padding: 7px 0; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  /* border: hidden; */
+  width: 75%;
+  margin: auto;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #ff7171, #ff79a1, #f28bcc, #d8a1ec, #b8b5ff);
+  /* background-image: linear-gradient(to right, #ff0060, #fe235d, #fd355a, #fc4258, #fa4d56); */
+  /* background-image: linear-gradient(to right, #ebf068, #c9de5d, #a8cb54, #88b84c, #69a544, #50a454, #34a264, #00a073, #00ae9c, #00bac2, #08c4e2, #5fccfb); */
+  /* background-image: linear-gradient(to right, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F,#F9F871 ); */
+}
+
+.btn-bg{
+  background-image: linear-gradient(to right, #ff7171, #ff79a1, #f28bcc, #d8a1ec, #b8b5ff);
+
+}
+.buttonCon{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+
+    
+}
+
+@media(min-width: 530px){
+  .login-logo{
+    display: none;
+    margin: auto;
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .headerContainer{
+  padding-block-start: 56px;
+  }
+
+}
+@media (min-width: 310px) and (max-width: 570px) {
+   .login-logo{
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+
+   .form-switch{
+     margin-right: 4px;
+   }
+
+  .gradient{
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .loginContainer{
+    width: 100%;
+    height: 100vh;
+    margin: auto; 
+    justify-content: space-evenly;
+    
+  }
+  .login-form{
+    width: 95%;
+    margin: auto;
+  }
+
+  .action-btn{
+    width: 180px;
+  }
+  .iconsPack{
+    width: 70px;
+    justify-content: space-evenly;
+  }
+  }
+
+
+/* Styles for Header.js */
+
+/* .headGrid{
+  justify-content: space-evenly;
+} */
+
+
+.header-logo{
+  width: 40px;
+  height: 30px;
+}
+.brandName{
+  font-weight: 700;
+}
+.headerContainer{
+  font-family: 'Lato',sans-serif;
+  overflow: hidden;
+  height: 48px;
+  width: 100%;
+  padding: 2% 0;
+  background-color: rgba(174, 170, 185, 0.24);
+  /* border-bottom: solid 1px rgba(226, 218, 226, 0.897); */
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.iconsPack{
+  margin: 4px auto;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+/* Styles for Home.js */
+
+.homeContainer{
+  overflow: hidden;
+  width: 95%;
+  margin: auto;
+  font-family: 'Lato',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 42px; 
+}
+
+.bg{
+  width: 100%;
+  /* background-color: #F7F7F7; */
+  height: 95vh;
+  padding-bottom: 24px;
+  margin-top: -16px;
+}
+
+
+/* Left Grid CSS */
+
+.userCard{
+  padding: 8px;
+  background-color: #4b3f5e42;
+  /* background-color: rgba(174, 170, 185, 0.24); */
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userCard > p{
+  padding-top: 3px;
+  text-decoration: underline;
+}
+
+/* Post Grid CSS */
+
+.postCard{
+  padding: 8px;
+  background-color: #4b3f5e42;
+  /* background-color: rgba(174, 170, 185, 0.24); */
+  border-radius: 7px;
+  margin: auto;
+  width: 100%;
+}
+
+.heroRow{
+  display: flex;
+  align-items: center;
+}
+
+.heroTextBox{
+  height: 48px;
+  margin-left: 5%;
+  border-radius: 22px;
+  font-weight: 800;
+  width: 550px;
+  padding: 4px 12px;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 6px;
+  margin-left: 40px;
+}
+
+/* News Card CSS */
+.newsCard{
+  margin: 4px 0;
+  padding: 10px;
+  background-color: #4b3f5e42;
+  /* background-color: rgba(174, 170, 185, 0.24); */
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  .iconsPack{
+    width: 160px;
+    justify-content: space-evenly;
+  }
+
+  .newsCard{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .userCard{
+    width: 0%;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .postCard{
+    width: 100%;
+    /* margin-top: 10px; */
+    justify-content:stretch;
+    
+  }
+
+  .heroTextBox{
+    height: 48px;
+    border-radius: 22px;
+    font-weight: 800;
+    padding: 4px 6px;
+    width: 100%;  
+  }
+}
+
+/* Styles for First.js */
+.firstPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* margin: auto; */
+  background-color: #F7F7F7;
+  color: #2C272E;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.button{
+   border-radius: 12px;
+   border-color: #F7F7F7;
+   background-color: white;
+   font-weight: 600;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.right{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin-top: 25px;  
+}
+
+@media (min-width: 300px) and (max-width: 678px) {
+  .firstPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.landPage{
+  background-color: #F7F7F7;
+  color: #2C272E;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+
+/* Colorcodes
+
+moph color - #c471ed #c7f
+tomato     - #f64f59 #f56
+
+
+*/
