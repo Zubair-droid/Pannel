@@ -1,10 +1,29 @@
 import React from 'react'
 import "../App.css"
-import Logo from '../images/panel-logo.png'
-import Google from "../images/google-logo.png"
-import {Link} from "react-router-dom"
+import  GoogleImg from "../images/google-logo.png"
+import Logo from "../images/panel-logo.png"
+import  styled from "styled-components";
+import { Link } from "react-router-dom"
+// import { connect } from "react-redux"
+// import { signInAPI } from "../actions/index.js";
+ import { auth } from "../firebase"
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 function First() {
+    
+    const signInWithGoogle = (e)=>{
+        
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+        .then((payload) => {
+            console.log(payload);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        e.preventDefault();
+    } 
+
     return (
         <div className = "landPage">
         
@@ -13,32 +32,36 @@ function First() {
          <div className="firstPage mt-3">
             <div className="">
                 {/* <h3 className="">Create Your Account</h3> */}
-                <img src={Logo} className="logo" alt="panel-logo" />  
+                <img src= { Logo } className="logo" alt="panel-logo" />  
                 <h2 className="fw-bolder text-center py-1">Pannel</h2>
                 
             </div>
 
-            
-                
-                <form className = "text-center ms-md-5">
+ 
+                <form className = "text-center ms-md-5" >
                 <div>
-                <button className = "button btn-block align-baseline" style={{backgroundColor: "#B8B5FF"}}>
-                    <p className="fw-bolder mb-0">Continue with  <img src={Google} style={{width: '38px', height: "30px", marginLeft: "-8px"}} alt="" />   </p>
+                <Google onClick={signInWithGoogle} className="button btn-block">
+                {/* <button className = "button btn-block align-baseline" style={{backgroundColor: "#B8B5FF"}}> */}
+                   
+                    <p className="fw-bolder mb-0">Continue with  <img src= { GoogleImg } style={{width: '38px', height: "30px", marginLeft: "-8px"}} alt="" />   </p>
                   
-                </button>
+                {/* </button> */}
+                </Google>
+
+            
                 <p>or</p>
                
             </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control fw-bold" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" />
+                    <div className="form-group">
+                      <input type="email" className="form-control fw-bold" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" />
                     </div>
                     
-                    <div class="form-group">
-                       <input type="password" class="form-control fw-bold" id="exampleInputPassword1" placeholder="Password" />
+                    <div className="form-group">
+                       <input type="password" className="form-control fw-bold" id="exampleInputPassword1" placeholder="Password" />
                     </div>
 
-                    <div class="form-group">
-                        <input type="password" class="form-control fw-bold" id="exampleInputPassword1" placeholder="Confirm Password" />
+                    <div className="form-group">
+                        <input type="password" className="form-control fw-bold" id="exampleInputPassword2" placeholder="Confirm Password" />
                     </div>
 
                     <div className="">
@@ -57,16 +80,31 @@ function First() {
                         </Link>
                     </div>
                 </form>
-                
-
-               
-            </div>
-
-
-            
-    </div>
+            </div>      
+        </div>
       
     )
 }
 
+
+const Google = styled.button`
+    /* border: none; */
+    /* width: 38px; */
+    height: 30px;
+    /* marginLeft: -8px; */
+    /* background-color: "#B8B5FF"; */
+    
+`;
+
+
+
+// const mapStateToProps = (state) => {
+//     return {};
+// }
+
+// const mapDispatchToProps = (dispatch) => ({
+//     signIn: ()=> dispatch(signInAPI()),
+// });
+
+// export default connect(mapStateToProps, mapDispatchToProps)(First)
 export default First

@@ -46,17 +46,16 @@ const showAlert = (type, message) => {
    })
   }
 
-  setTimeout(() => {
-    showAlert(null)
-  }, 3000);
+  // setTimeout(() => {
+  //   showAlert(null)
+  // }, 3000);
   
   return (
     
     <div className="App" style={myStyle}>
        
       
-
-        
+      
        {/* <Login />
        
        <Header />
