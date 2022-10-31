@@ -3,7 +3,6 @@ import {useState} from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import First from "./components/First"
-// import Alert from './components/Alert'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
 function App() {
@@ -46,16 +45,9 @@ const showAlert = (type, message) => {
    })
   }
 
-  // setTimeout(() => {
-  //   showAlert(null)
-  // }, 3000);
-  
   return (
     
     <div className="App" style={myStyle}>
-       
-      
-      
        {/* <Login />
        
        <Header />
@@ -66,9 +58,6 @@ const showAlert = (type, message) => {
 
        <Router>
         <Switch>
-          
-           
-
            <Route path = "/home">
                
               <Header />
@@ -98,16 +87,6 @@ const showAlert = (type, message) => {
               
         </Switch>   
       </Router>    
-          
-         
-
-          
-
-  
-
-        
-
-       
     
     </div>
     
