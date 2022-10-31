@@ -9,10 +9,20 @@ import { Link } from "react-router-dom"
  import { auth } from "../firebase"
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
-function First() {
+
+
+const Google = styled.button`
+    /* border: none; */
+    /* width: 38px; */
+    height: 30px;
+    /* marginLeft: -8px; */
+    /* background-color: "#B8B5FF"; */
+    
+`;
+
+const First =() =>{
     
     const signInWithGoogle = (e)=>{
-        
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
         .then((payload) => {
@@ -87,14 +97,6 @@ function First() {
 }
 
 
-const Google = styled.button`
-    /* border: none; */
-    /* width: 38px; */
-    height: 30px;
-    /* marginLeft: -8px; */
-    /* background-color: "#B8B5FF"; */
-    
-`;
 
 
 
